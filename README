@@ -1,11 +1,35 @@
 NAME
-    Error::Pure::ANSIColor - Perl module for structured errors with
-    Term::ANSIColor output.
+    Error::Pure::ANSIColor - Error::Pure modules with Term::ANSIColor
+    support.
 
-MODULES
-    Error::Pure::ANSIColor::AllError, Error::Pure::ANSIColor::Die,
-    Error::Pure::ANSIColor::Error, Error::Pure::ANSIColor::ErrorList,
-    Error::Pure::ANSIColor::Print,
+DESCRIPTION
+    List of modules:
+
+    "Error::Pure::ANSIColor::AllError"
+            Print full backtrace with Term::ANSIColor support.
+
+    "Error::Pure::ANSIColor::Die"
+            Die with Term::ANSIColor support.
+
+    "Error::Pure::ANSIColor::Error"
+            Print error on one line with Term::ANSIColor support.
+
+    "Error::Pure::ANSIColor::ErrorList"
+            Print list of errors with ANSIColor support. Each error on one
+            line.
+
+    "Error::Pure::ANSIColor::Print"
+            Print error as simple string with ANSIColor support
+
+SEE ALSO
+    Error::Pure, Error::Pure::ANSIColor::AllError,
+    Error::Pure::ANSIColor::Die, Error::Pure::ANSIColor::Error,
+    Error::Pure::ANSIColor::ErrorList, Error::Pure::ANSIColor::Print,
+    Error::Pure::AllError, Error::Pure::Die, Error::Pure::Error,
+    Error::Pure::ErrorList, Error::Pure::HTTP::AllError,
+    Error::Pure::HTTP::Error, Error::Pure::HTTP::ErrorList,
+    Error::Pure::HTTP::Print, Error::Pure::NoDie, Error::Pure::Output::Text,
+    Error::Pure::Print, Error::Pure::Utils.
 
 REPOSITORY
     <https://github.com/tupinek/Error-Pure-ANSIColor>
@@ -16,8 +40,8 @@ AUTHOR
     <http://skim.cz>
 
 LICENSE AND COPYRIGHT
-    BSD license.
-
+.
+BSD license.
 VERSION
     0.01
 
