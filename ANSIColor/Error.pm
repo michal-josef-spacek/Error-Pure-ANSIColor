@@ -10,6 +10,7 @@ use Error::Pure::Utils qw(err_helper);
 use Error::Pure::Output::Text qw(err_line);
 use List::MoreUtils qw(none);
 use Readonly;
+use Term::ANSIColor;
 
 # Constants.
 Readonly::Array our @EXPORT_OK => qw(err);
@@ -34,7 +35,12 @@ sub err {
 		&& none { $_ eq $EVAL || $_ =~ m/^eval '/ms }
 		map { $_->{'sub'} } @{$stack_ar}) {
 
-		die err_line(@errors);
+		print STDERR color 'bold yellow';
+		my $err_line = err_line(@errors);
+		chomp $err_line;
+		print STDERR $err_line;
+		print STDERR color 'reset';
+		die "\n";	
 
 	# Die for eval.
 	} else {
