@@ -1,5 +1,5 @@
 ---
-abstract: 'Perl module for structured errors with Text::ANSIColor output.'
+abstract: 'Perl module for structured errors with Term::ANSIColor output.'
 author:
   - 'Michal Špaček <skim@cpan.org>'
 build_requires:
@@ -32,6 +32,7 @@ requires:
   Exporter: 0
   List::MoreUtils: 0
   Readonly: 0
+  Term::ANSIColor: 0
   perl: 5.6.2
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Error-Pure-ANSIColor

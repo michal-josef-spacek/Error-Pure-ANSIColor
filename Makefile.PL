@@ -6,10 +6,11 @@ use warnings;
 use inc::Module::Install;
 
 # Definition.
-abstract 'Perl module for structured errors with Text::ANSIColor output.';
+abstract 'Perl module for structured errors with Term::ANSIColor output.';
 author 'Michal Špaček <skim@cpan.org>';
 license 'bsd';
 name 'Error-Pure-ANSIColor';
+requires 'Term::ANSIColor';
 requires 'Cwd' => 0;
 requires 'English' => 0;
 requires 'Exporter' => 0;
