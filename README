@@ -1,0 +1,23 @@
+NAME
+    Error::Pure::ANSIColor - Perl module for structured errors with
+    Term::ANSIColor output.
+
+MODULES
+    Error::Pure::ANSIColor::AllError, Error::Pure::ANSIColor::Die,
+    Error::Pure::ANSIColor::Error, Error::Pure::ANSIColor::ErrorList,
+    Error::Pure::ANSIColor::Print,
+
+REPOSITORY
+    <https://github.com/tupinek/Error-Pure-ANSIColor>
+
+AUTHOR
+    Michal Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    BSD license.
+
+VERSION
+    0.01
+
