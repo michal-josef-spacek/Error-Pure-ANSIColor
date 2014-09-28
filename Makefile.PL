@@ -10,6 +10,7 @@ abstract 'Perl module for structured errors with Term::ANSIColor output.';
 author 'Michal Špaček <skim@cpan.org>';
 license 'bsd';
 name 'Error-Pure-ANSIColor';
+readme_from 'ANSIColor.pm';
 requires 'Term::ANSIColor';
 requires 'Cwd' => 0;
 requires 'English' => 0;
