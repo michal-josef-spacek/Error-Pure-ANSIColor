@@ -4,6 +4,9 @@ package Error::Pure::ANSIColor;
 use strict;
 use warnings;
 
+# Version.
+our $VERSION = 0.01;
+
 1;
 
 __END__
