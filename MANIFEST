@@ -49,3 +49,7 @@ t/Error-Pure-ANSIColor-Print/00-use.t
 t/Error-Pure-ANSIColor-Print/01-version.t
 t/Error-Pure-ANSIColor-Print/02-pod_coverage.t
 t/Error-Pure-ANSIColor-Print/03-pod.t
+t/Error-Pure-ANSIColor/00-use.t
+t/Error-Pure-ANSIColor/01-version.t
+t/Error-Pure-ANSIColor/02-pod_coverage.t
+t/Error-Pure-ANSIColor/03-pod.t
