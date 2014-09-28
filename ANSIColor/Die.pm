@@ -11,7 +11,7 @@ use List::MoreUtils qw(none);
 use Readonly;
 
 # Version.
-our $VERSION = 0.10;
+our $VERSION = 0.01;
 
 # Constants.
 Readonly::Array our @EXPORT_OK => qw(err);
