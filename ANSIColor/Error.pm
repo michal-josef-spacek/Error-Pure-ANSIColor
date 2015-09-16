@@ -123,13 +123,13 @@ L<Readonly>.
 
 =head1 SEE ALSO
 
-L<Error::Pure>,
-L<Error::Pure::AllError>,
-L<Error::Pure::Die>,
-L<Error::Pure::ErrorList>,
-L<Error::Pure::Output::Text>,
-L<Error::Pure::Print>,
-L<Error::Pure::Utils>.
+=over
+
+=item L<Task::Error::Pure>
+
+Install the Error::Pure modules.
+
+=back
 
 =head1 REPOSITORY
 

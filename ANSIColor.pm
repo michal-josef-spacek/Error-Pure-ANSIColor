@@ -49,27 +49,13 @@ Print error as simple string with ANSIColor support
 
 =head1 SEE ALSO
 
-L<Error::Pure>,
-L<Error::Pure::ANSIColor::AllError>,
-L<Error::Pure::ANSIColor::Die>,
-L<Error::Pure::ANSIColor::Error>,
-L<Error::Pure::ANSIColor::ErrorList>,
-L<Error::Pure::ANSIColor::Print>,
-L<Error::Pure::AllError>,
-L<Error::Pure::Die>,
-L<Error::Pure::Error>,
-L<Error::Pure::ErrorList>,
-L<Error::Pure::HTTP::AllError>,
-L<Error::Pure::HTTP::Error>,
-L<Error::Pure::HTTP::ErrorList>,
-L<Error::Pure::HTTP::JSON>,
-L<Error::Pure::HTTP::Print>,
-L<Error::Pure::JSON>,
-L<Error::Pure::NoDie>,
-L<Error::Pure::Output::JSON>,
-L<Error::Pure::Output::Text>,
-L<Error::Pure::Print>,
-L<Error::Pure::Utils>.
+=over
+
+=item L<Task::Error::Pure>
+
+Install the Error::Pure modules.
+
+=back
 
 =head1 REPOSITORY
 
