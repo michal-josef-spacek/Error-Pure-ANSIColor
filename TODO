@@ -1,10 +1,12 @@
 TODO
 ====
-1. Pridat barvy.
-   http://stackoverflow.com/questions/5691570/coloring-a-perl-die-message
 3.
 
 Applied
 =======
 2. Vylepsit SEE ALSO section.
 OK [20150916] skim
+
+1. Pridat barvy.
+   http://stackoverflow.com/questions/5691570/coloring-a-perl-die-message
+OK [20170308] skim

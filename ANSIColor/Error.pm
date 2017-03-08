@@ -1,13 +1,11 @@
 package Error::Pure::ANSIColor::Error;
 
-# Pragmas.
 use base qw(Exporter);
 use strict;
 use warnings;
 
-# Modules.
+use Error::Pure::Output::ANSIColor qw(err_line);
 use Error::Pure::Utils qw(err_helper);
-use Error::Pure::Output::Text qw(err_line);
 use List::MoreUtils qw(none);
 use Readonly;
 use Term::ANSIColor;
@@ -16,11 +14,7 @@ use Term::ANSIColor;
 Readonly::Array our @EXPORT_OK => qw(err);
 Readonly::Scalar my $EVAL => 'eval {...}';
 
-# Version.
 our $VERSION = 0.01;
-
-# Ignore die signal.
-$SIG{__DIE__} = 'IGNORE';
 
 # Process error.
 sub err {
@@ -35,22 +29,11 @@ sub err {
 		&& none { $_ eq $EVAL || $_ =~ m/^eval '/ms }
 		map { $_->{'sub'} } @{$stack_ar}) {
 
-		print STDERR color 'bold yellow';
-		my $err_line = err_line(@errors);
-		chomp $err_line;
-		print STDERR $err_line;
-		print STDERR color 'reset';
-		die "\n";	
+		die err_line(@errors);
 
 	# Die for eval.
 	} else {
-		my $e = $errors[-1]->{'msg'}->[0];
-		if (! defined $e) {
-			$e = 'undef';
-		} else {
-			chomp $e;
-		}
-		die "$e\n";
+		die "$errors[-1]->{'msg'}->[0]\n";
 	}
 
 	return;
@@ -85,11 +68,9 @@ Error::Pure::ANSIColor::Error - Error::Pure module with error on one line with i
 
 =head1 EXAMPLE1
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Error::Pure::ANSIColor::Error qw(err);
 
  # Error.
@@ -100,11 +81,9 @@ Error::Pure::ANSIColor::Error - Error::Pure module with error on one line with i
 
 =head1 EXAMPLE2
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Error::Pure::ANSIColor::Error qw(err);
 
  # Error.
@@ -115,8 +94,8 @@ Error::Pure::ANSIColor::Error - Error::Pure module with error on one line with i
 
 =head1 DEPENDENCIES
 
+L<Error::Pure::Output::ANSIColor>,
 L<Error::Pure::Utils>,
-L<Error::Pure::Output::Text>,
 L<Exporter>,
 L<List::MoreUtils>,
 L<Readonly>.
@@ -143,7 +122,7 @@ L<http://skim.cz>
 
 =head1 LICENSE AND COPYRIGHT
 
- © 2013-2015 Michal Špaček
+ © 2013-2017 Michal Špaček
  BSD 2-Clause License
 
 =head1 VERSION

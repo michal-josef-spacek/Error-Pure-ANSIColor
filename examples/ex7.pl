@@ -1,14 +1,16 @@
 #!/usr/bin/env perl
 
-# Pragmas.
 use strict;
 use warnings;
 
-# Modules.
-use Error::Pure::ANSIColor::Print qw(err);
+use Error::Pure::ANSIColor::AllError qw(err);
 
-# Error.
-err '1';
+print "1\n";
+err "This is a fatal error.", "name", "value";
+print "2\n";
 
 # Output:
 # 1
+# ERROR: This is a fatal error.
+# name: value
+# main  err  ./script.pl  12

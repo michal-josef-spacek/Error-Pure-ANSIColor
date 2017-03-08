@@ -1,19 +1,25 @@
 #!/usr/bin/env perl
 
-# Pragmas.
+package Example3;
+
 use strict;
 use warnings;
 
-# Modules.
-use English qw(-no_match_vars);
-use Error::Pure::ANSIColor::ErrorList qw(err);
+use Error::Pure::ANSIColor::PrintVar qw(err);
 
-# Error.
-eval { err "1"; };
-if ($EVAL_ERROR) {
-       err "2";
+# Test with error.
+sub test {
+        err '1', '2', '3';
 }
 
+package main;
+
+use strict;
+use warnings;
+
+# Run.
+Example3::test();
+
 # Output:
-# #Error [example3.pl:10] 1
-# #Error [example3.pl:11] 2
+# Example3: 1
+# 2: 3

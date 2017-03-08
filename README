@@ -21,6 +21,10 @@ DESCRIPTION
     "Error::Pure::ANSIColor::Print"
             Print error as simple string with ANSIColor support
 
+    "Error::Pure::ANSIColor::PrintVar"
+            Print error with all variables as simple string with ANSIColor
+            support
+
 SEE ALSO
     Task::Error::Pure
         Install the Error::Pure modules.
@@ -34,7 +38,8 @@ AUTHOR
     <http://skim.cz>
 
 LICENSE AND COPYRIGHT
-    BSD license.
+     © 2013-2017 Michal Špaček
+     BSD 2-Clause License
 
 VERSION
     0.01

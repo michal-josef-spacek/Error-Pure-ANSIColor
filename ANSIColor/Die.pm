@@ -1,25 +1,20 @@
 package Error::Pure::ANSIColor::Die;
 
-# Pragmas.
 use base qw(Exporter);
 use strict;
 use warnings;
 
-# Modules.
+use Error::Pure::Output::ANSIColor qw(err_die);
 use Error::Pure::Utils qw(err_helper);
 use List::MoreUtils qw(none);
 use Readonly;
 
-# Version.
 our $VERSION = 0.01;
 
 # Constants.
 Readonly::Array our @EXPORT_OK => qw(err);
 Readonly::Scalar my $EVAL => 'eval {...}';
 Readonly::Scalar my $EMPTY_STR => q{};
-
-# Ignore die signal.
-$SIG{__DIE__} = 'IGNORE';
 
 # Process error.
 sub err {
@@ -28,26 +23,17 @@ sub err {
 	# Get errors structure.
 	my @errors = err_helper(@msg);
 
-	# Error messages.
-	my $e = $errors[-1]->{'msg'}->[0];
-	if (! defined $e) {
-		$e = 'undef';
-	}
-	chomp $e;
-
 	# Finalize in main on last err.
 	my $stack_ar = $errors[-1]->{'stack'};
 	if ($stack_ar->[-1]->{'class'} eq 'main'
 		&& none { $_ eq $EVAL || $_ =~ /^eval '/ms }
 		map { $_->{'sub'} } @{$stack_ar}) {
 
-		die (join $EMPTY_STR, @{$errors[-1]->{'msg'}}).
-			"at $stack_ar->[0]->{'prog'} line ".
-			"$stack_ar->[0]->{'line'}.\n";
+		die err_die(@errors)."\n";
 
 	# Die for eval.
 	} else {
-		die "$e\n";
+		die "$errors[-1]->{'msg'}->[0]\n";
 	}
 
 	return;
@@ -82,11 +68,9 @@ Error::Pure::ANSIColor::Die - Error::Pure module with classic die.
 
 =head1 EXAMPLE1
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Error::Pure::ANSIColor::Die qw(err);
 
  # Error.
@@ -97,11 +81,9 @@ Error::Pure::ANSIColor::Die - Error::Pure module with classic die.
 
 =head1 EXAMPLE2
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Error::Pure::ANSIColor::Die qw(err);
 
  # Error.
@@ -112,11 +94,9 @@ Error::Pure::ANSIColor::Die - Error::Pure module with classic die.
 
 =head1 EXAMPLE3
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Dumpvalue;
  use Error::Pure::ANSIColor::Die qw(err);
  use Error::Pure::Utils qw(err_get);
@@ -160,6 +140,8 @@ Error::Pure::ANSIColor::Die - Error::Pure module with classic die.
 
 =head1 DEPENDENCIES
 
+L<Error::Pure::Output::ANSIColor>,
+L<Error::Pure::Utils>,
 L<Exporter>,
 L<List::MoreUtils>,
 L<Readonly>.
@@ -186,7 +168,7 @@ L<http://skim.cz>
 
 =head1 LICENSE AND COPYRIGHT
 
- © 2013-2015 Michal Špaček
+ © 2013-2017 Michal Špaček
  BSD 2-Clause License
 
 =head1 VERSION

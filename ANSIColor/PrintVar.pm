@@ -1,19 +1,20 @@
-package Error::Pure::ANSIColor::ErrorList;
+package Error::Pure::ANSIColor::PrintVar;
 
 use base qw(Exporter);
 use strict;
 use warnings;
 
+use Error::Pure::Output::ANSIColor qw(err_print_var);
 use Error::Pure::Utils qw(err_helper);
-use Error::Pure::Output::ANSIColor qw(err_line_all);
 use List::MoreUtils qw(none);
 use Readonly;
 
 # Constants.
 Readonly::Array our @EXPORT_OK => qw(err);
+Readonly::Scalar my $EMPTY_STR => q{};
 Readonly::Scalar my $EVAL => 'eval {...}';
 
-our $VERSION = 0.01;
+our $VERSION = 0.25;
 
 # Process error.
 sub err {
@@ -28,7 +29,7 @@ sub err {
 		&& none { $_ eq $EVAL || $_ =~ /^eval '/ms }
 		map { $_->{'sub'} } @{$stack_ar}) {
 
-		die err_line_all(@errors);
+		die scalar err_print_var(@errors);
 
 	# Die for eval.
 	} else {
@@ -48,19 +49,18 @@ __END__
 
 =head1 NAME
 
-Error::Pure::ANSIColor::ErrorList - Error::Pure module with list of errors in one line
-with informations.
+Error::Pure::ANSIColor::PrintVar - Error::Pure module for simple error print with all variables with ANSIColor support.
 
 =head1 SYNOPSIS
 
- use Error::Pure::ANSIColor::ErrorList qw(err);
- err "This is a fatal error.", "name", "value";
+ use Error::Pure::ANSIColor::PrintVar qw(err);
+ err 'This is a fatal error', 'name', 'value';
 
 =head1 SUBROUTINES
 
-=over 4
+=over 8
 
-=item B<err(@messages)>
+=item C<err(@messages)>
 
  Process error with messages @messages.
 
@@ -71,49 +71,58 @@ with informations.
  use strict;
  use warnings;
 
- use Error::Pure::ANSIColor::ErrorList qw(err);
+ use Error::Pure::ANSIColor::PrintVar qw(err);
 
  # Error.
  err '1';
 
  # Output:
- # #Error [example1.pl:9] 1
+ # 1
 
 =head1 EXAMPLE2
 
  use strict;
  use warnings;
 
- use Error::Pure::ANSIColor::ErrorList qw(err);
+ use Error::Pure::ANSIColor::PrintVar qw(err);
 
  # Error.
  err '1', '2', '3';
 
  # Output:
- # #Error [example2.pl:9] 1
+ # 1
+ # 2: 3
 
 =head1 EXAMPLE3
+
+ package Example3;
 
  use strict;
  use warnings;
 
- use English qw(-no_match_vars);
- use Error::Pure::ANSIColor::ErrorList qw(err);
+ use Error::Pure::ANSIColor::PrintVar qw(err);
 
- # Error.
- eval { err "1"; };
- if ($EVAL_ERROR) {
-        err "2";
+ # Test with error.
+ sub test {
+         err '1', '2', '3';
  }
 
+ package main;
+
+ use strict;
+ use warnings;
+
+ # Run.
+ Example3::test();
+
  # Output:
- # #Error [example3.pl:10] 1
- # #Error [example3.pl:11] 2
+ # Example3: 1
+ # 2: 3
 
 =head1 DEPENDENCIES
 
+L<Error::Pure::Output::ANSIColor>,
 L<Error::Pure::Utils>,
-L<Error::Pure::Output::Text>,
 L<Exporter>,
 L<List::MoreUtils>,
 L<Readonly>.

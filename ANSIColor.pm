@@ -45,6 +45,10 @@ Print list of errors with ANSIColor support. Each error on one line.
 
 Print error as simple string with ANSIColor support
 
+=item C<Error::Pure::ANSIColor::PrintVar>
+
+Print error with all variables as simple string with ANSIColor support
+
 =back
 
 =head1 SEE ALSO
@@ -69,7 +73,7 @@ L<http://skim.cz>
 
 =head1 LICENSE AND COPYRIGHT
 
- © 2013-2015 Michal Špaček
+ © 2013-2017 Michal Špaček
  BSD 2-Clause License
 
 =head1 VERSION

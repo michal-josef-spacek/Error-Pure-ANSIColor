@@ -1,18 +1,17 @@
 #!/usr/bin/env perl
 
-# Pragmas.
 use strict;
 use warnings;
 
-# Modules.
-use Error::Pure::ANSIColor::AllError qw(err);
+use English qw(-no_match_vars);
+use Error::Pure::ANSIColor::ErrorList qw(err);
 
-print "1\n";
-err "This is a fatal error.", "name", "value";
-print "2\n";
+# Error.
+eval { err "1"; };
+if ($EVAL_ERROR) {
+       err "2";
+}
 
 # Output:
-# 1
-# ERROR: This is a fatal error.
-# name: value
-# main  err  ./script.pl  12
+# #Error [example3.pl:10] 1
+# #Error [example3.pl:11] 2

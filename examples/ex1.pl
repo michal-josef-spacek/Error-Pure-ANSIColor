@@ -1,11 +1,9 @@
 #!/usr/bin/env perl
 
-# Pragmas.
 use strict;
 use warnings;
 
-# Modules.
-use Error::Pure::ANSIColor::Error qw(err);
+use Error::Pure::ANSIColor::ErrorList qw(err);
 
 # Error.
 err '1';
