@@ -9,7 +9,7 @@ use Error::Pure::Utils qw(err_helper);
 use List::MoreUtils qw(none);
 use Readonly;
 
-our $VERSION = 0.04;
+our $VERSION = 0.26;
 
 # Constants.
 Readonly::Array our @EXPORT_OK => qw(err);
@@ -173,6 +173,6 @@ L<http://skim.cz>
 
 =head1 VERSION
 
-0.04
+0.26
 
 =cut

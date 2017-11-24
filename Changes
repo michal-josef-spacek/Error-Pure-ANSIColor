@@ -1,4 +1,6 @@
-0.04
+0.26
+ - In 0.01 version was Error::Pure::AnsiColor::PrintVar with 0.25 version.
+   Then grow version to bigger.
 
 0.03 2017-11-24T11:01:46+01:00
  - Fix signature.
