@@ -1,4 +1,5 @@
-0.03
+0.03 2017-11-24T11:01:46+01:00
+ - Fix signature.
 
 0.02 2017-04-02T19:15:58+02:00
  - Fix #120864 - Makefile.PL fails with no '.' in @INC.
