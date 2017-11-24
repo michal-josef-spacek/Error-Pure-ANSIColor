@@ -14,7 +14,7 @@ use Term::ANSIColor;
 Readonly::Array our @EXPORT_OK => qw(err);
 Readonly::Scalar my $EVAL => 'eval {...}';
 
-our $VERSION = 0.26;
+our $VERSION = 0.27;
 
 # Process error.
 sub err {
@@ -127,6 +127,6 @@ L<http://skim.cz>
 
 =head1 VERSION
 
-0.26
+0.27
 
 =cut
