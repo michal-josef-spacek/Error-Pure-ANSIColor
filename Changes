@@ -1,4 +1,4 @@
-0.26
+0.26 2017-11-24T11:30:49+01:00
  - In 0.01 version was Error::Pure::AnsiColor::PrintVar with 0.25 version.
    Then grow version to bigger.
 
