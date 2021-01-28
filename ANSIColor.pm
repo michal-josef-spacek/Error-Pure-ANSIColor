@@ -1,10 +1,8 @@
 package Error::Pure::ANSIColor;
 
-# Pragmas.
 use strict;
 use warnings;
 
-# Version.
 our $VERSION = 0.27;
 
 1;
