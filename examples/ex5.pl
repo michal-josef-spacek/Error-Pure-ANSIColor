@@ -3,11 +3,15 @@
 use strict;
 use warnings;
 
-use Error::Pure::ANSIColor::PrintVar qw(err);
+use English qw(-no_match_vars);
+use Error::Pure::ANSIColor::ErrorList qw(err);
 
 # Error.
-err '1', '2', '3';
+eval { err "1"; };
+if ($EVAL_ERROR) {
+       err "2";
+}
 
 # Output:
-# 1
-# 2: 3
+# #Error [example3.pl:10] 1
+# #Error [example3.pl:11] 2

@@ -3,14 +3,10 @@
 use strict;
 use warnings;
 
-use Error::Pure::ANSIColor::AllError qw(err);
+use Error::Pure::ANSIColor::Die qw(err);
 
-print "1\n";
-err "This is a fatal error.", "name", "value";
-print "2\n";
+# Error.
+err '1';
 
 # Output:
-# 1
-# ERROR: This is a fatal error.
-# name: value
-# main  err  ./script.pl  12
+# 1 at example1.pl line 9.

@@ -3,10 +3,11 @@
 use strict;
 use warnings;
 
-use Error::Pure::ANSIColor::Die qw(err);
+use Error::Pure::ANSIColor::PrintVar qw(err);
 
 # Error.
 err '1', '2', '3';
 
 # Output:
-# 1 at example2.pl line 9.
+# 1
+# 2: 3

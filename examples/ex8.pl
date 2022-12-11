@@ -3,10 +3,10 @@
 use strict;
 use warnings;
 
-use Error::Pure::ANSIColor::Error qw(err);
+use Error::Pure::ANSIColor::Die qw(err);
 
 # Error.
-err '1';
+err '1', '2', '3';
 
 # Output:
-# #Error [example1.pl:9] 1
+# 1 at example2.pl line 9.
