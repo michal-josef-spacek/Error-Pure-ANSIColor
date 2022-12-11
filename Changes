@@ -1,5 +1,6 @@
 0.27
  - Improve LICENSE AND COPYRIGHT section in doc.
+ - Move bugtracker to github.
  - Update author name.
  - Update Module::Install to 1.19 version.
 
