@@ -1,4 +1,5 @@
 0.27
+ - Update Module::Install to 1.19 version.
 
 0.26 2017-11-24T11:30:49+01:00
  - In 0.01 version was Error::Pure::AnsiColor::PrintVar with 0.25 version.
