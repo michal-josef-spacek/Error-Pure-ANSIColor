@@ -1,4 +1,5 @@
 0.27
+ - Improve LICENSE AND COPYRIGHT section in doc.
  - Update Module::Install to 1.19 version.
 
 0.26 2017-11-24T11:30:49+01:00
