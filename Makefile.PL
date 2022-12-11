@@ -27,7 +27,7 @@ resources 'repository' => 'git://github.com/michal-josef-spacek/Error-Pure-ANSIC
 test_requires 'Test::More' => 0;
 test_requires 'Test::NoWarnings' => 0;
 tests_recursive;
-version '0.27';
+version '0.28';
 
 # Run.
 WriteAll();

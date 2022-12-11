@@ -9,7 +9,7 @@ use Error::Pure::Utils qw(err_helper);
 use List::MoreUtils qw(none);
 use Readonly;
 
-our $VERSION = 0.27;
+our $VERSION = 0.28;
 
 # Constants.
 Readonly::Array our @EXPORT_OK => qw(err);
@@ -174,6 +174,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.27
+0.28
 
 =cut
