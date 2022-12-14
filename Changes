@@ -1,4 +1,5 @@
 0.29
+ - Fix EXAMPLEs in Die doc.
  - Fix minimal dependency for List::Util.
  - Improve SYNOPSIS section by common usage with Error::Pure.
 

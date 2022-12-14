@@ -84,7 +84,7 @@ Process error with messages (error, error_key/value pairs).
  err '1';
 
  # Output:
- # 1 at example1.pl line 9.
+ # 1 at ../err_via_ansicolor_die.pl line 9.
 
 =head1 EXAMPLE2
 
@@ -97,7 +97,7 @@ Process error with messages (error, error_key/value pairs).
  err '1', '2', '3';
 
  # Output:
- # 1 at example2.pl line 9.
+ # 123 at ../err_via_ansicolor_die_with_params.pl line 9.
 
 =head1 EXAMPLE3
 
@@ -112,13 +112,13 @@ Process error with messages (error, error_key/value pairs).
  eval { err '1', '2', '3'; };
 
  # Error structure.
- my $err_ar = err_get();
+ my @err = err_get();
 
  # Dump.
  my $dump = Dumpvalue->new;
- $dump->dumpValues($err_ar);
+ $dump->dumpValues(@err);
 
- # In $err_ar:
+ # In @err:
  # [
  #         {
  #                 'msg' => [
@@ -131,14 +131,14 @@ Process error with messages (error, error_key/value pairs).
  #                                 'args' => '(1)',
  #                                 'class' => 'main',
  #                                 'line' => '9',
- #                                 'prog' => 'script.pl',
+ #                                 'prog' => 'err_via_ansicolor_die_with_params_in_eval_and_dump.pl',
  #                                 'sub' => 'err',
  #                         },
  #                         {
  #                                 'args' => '',
  #                                 'class' => 'main',
  #                                 'line' => '9',
- #                                 'prog' => 'script.pl',
+ #                                 'prog' => 'err_via_ansicolor_die_with_params_in_eval_and_dump.pl',
  #                                 'sub' => 'eval {...}',
  #                         },
  #                 ],
