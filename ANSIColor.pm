@@ -23,27 +23,27 @@ List of modules:
 
 =over 8
 
-=item C<Error::Pure::ANSIColor::AllError>
+=item L<Error::Pure::ANSIColor::AllError>
 
 Print full backtrace with Term::ANSIColor support.
 
-=item C<Error::Pure::ANSIColor::Die>
+=item L<Error::Pure::ANSIColor::Die>
 
 Die with Term::ANSIColor support.
 
-=item C<Error::Pure::ANSIColor::Error>
+=item L<Error::Pure::ANSIColor::Error>
 
 Print error on one line with Term::ANSIColor support.
 
-=item C<Error::Pure::ANSIColor::ErrorList>
+=item L<Error::Pure::ANSIColor::ErrorList>
 
 Print list of errors with ANSIColor support. Each error on one line.
 
-=item C<Error::Pure::ANSIColor::Print>
+=item L<Error::Pure::ANSIColor::Print>
 
 Print error as simple string with ANSIColor support
 
-=item C<Error::Pure::ANSIColor::PrintVar>
+=item L<Error::Pure::ANSIColor::PrintVar>
 
 Print error with all variables as simple string with ANSIColor support
 
