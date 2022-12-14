@@ -59,13 +59,11 @@ Error::Pure::ANSIColor::Error - Error::Pure module with error on one line with i
 
 =head1 SUBROUTINES
 
-=over 8
+=head2 B<err>
 
-=item B<err(@messages)>
+ err 'This is a fatal error', 'name', 'value';
 
- Process error with messages @messages.
-
-=back
+Process error with messages (error, error_key/value pairs).
 
 =head1 EXAMPLE1
 

@@ -59,13 +59,11 @@ Error::Pure::ANSIColor::PrintVar - Error::Pure module for simple error print wit
 
 =head1 SUBROUTINES
 
-=over 8
+=head2 C<err>
 
-=item C<err(@messages)>
+ err 'This is a fatal error', 'name', 'value';
 
- Process error with messages @messages.
-
-=back
+Process error with messages (error, error_key/value pairs).
 
 =head1 EXAMPLE1
 
