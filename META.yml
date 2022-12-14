@@ -23,7 +23,7 @@ no_index:
     - t
     - xt
 requires:
-  Error::Pure::Output::ANSIColor: 0.01
+  Error::Pure::Output::ANSIColor: 0.04
   Error::Pure::Utils: 0.24
   Exporter: 0
   List::Util: 1.33

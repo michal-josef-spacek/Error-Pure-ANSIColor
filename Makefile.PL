@@ -15,7 +15,7 @@ license 'bsd';
 name 'Error-Pure-ANSIColor';
 readme_from 'ANSIColor.pm';
 recursive_author_tests('xt');
-requires 'Error::Pure::Output::ANSIColor' => 0.01;
+requires 'Error::Pure::Output::ANSIColor' => 0.04;
 requires 'Error::Pure::Utils' => 0.24;
 requires 'Exporter' => 0;
 requires 'List::Util' => 1.33;
