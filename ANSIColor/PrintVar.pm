@@ -57,6 +57,14 @@ Error::Pure::ANSIColor::PrintVar - Error::Pure module for simple error print wit
 
  err 'This is a fatal error', 'name', 'value';
 
+ # __or__
+
+ use Error::Pure qw(err);
+
+ $ENV{'ERROR_PURE_TYPE'} = 'ANSIColor::PrintVar';
+
+ err "This is a fatal error.", "name", "value";
+
 =head1 SUBROUTINES
 
 =head2 C<err>

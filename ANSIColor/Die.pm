@@ -57,6 +57,14 @@ Error::Pure::ANSIColor::Die - Error::Pure module with classic die.
 
  err 'This is a fatal error', 'name', 'value';
 
+ # __or__
+
+ use Error::Pure qw(err);
+
+ $ENV{'ERROR_PURE_TYPE'} = 'ANSIColor::Die';
+
+ err "This is a fatal error.", "name", "value";
+
 =head1 SUBROUTINES
 
 =head2 B<err>

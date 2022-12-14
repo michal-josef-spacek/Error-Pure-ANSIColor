@@ -1,5 +1,6 @@
 0.29
  - Fix minimal dependency for List::Util.
+ - Improve SYNOPSIS section by common usage with Error::Pure.
 
 0.28 2022-12-14T08:39:59+01:00
  - Fix links in doc.
