@@ -1,4 +1,4 @@
-0.29
+0.29 2022-12-14T15:59:13+01:00
  - Add link to Error::Pure to doc.
  - Change minimal dependency (0.04) to Error::Pure::Output::ANSIColor to
    fix ansi colors in Print.
