@@ -53,6 +53,7 @@ Error::Pure::ANSIColor::AllError - Error::Pure module with full backtrace.
 =head1 SYNOPSIS
 
  use Error::Pure::ANSIColor::AllError qw(err);
+
  err "This is a fatal error.", "name", "value";
 
 =head1 SUBROUTINES

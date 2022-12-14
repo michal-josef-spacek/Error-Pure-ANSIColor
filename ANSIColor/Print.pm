@@ -54,6 +54,7 @@ Error::Pure::ANSIColor::Print - Error::Pure module for simple error print.
 =head1 SYNOPSIS
 
  use Error::Pure::ANSIColor::Print qw(err);
+
  err 'This is a fatal error', 'name', 'value';
 
 =head1 SUBROUTINES
