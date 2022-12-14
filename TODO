@@ -2,7 +2,6 @@ TODO
 ====
 3. Testy.
 4. Pridat moznost nastavovat barvy.
-5. Rename example files to better names.
 6.
 
 Applied
@@ -13,3 +12,6 @@ OK [20150916] skim
 1. Pridat barvy.
    http://stackoverflow.com/questions/5691570/coloring-a-perl-die-message
 OK [20170308] skim
+
+5. Rename example files to better names.
+OK [20221214] skim

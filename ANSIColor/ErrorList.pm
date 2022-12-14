@@ -75,6 +75,8 @@ Process error with messages (error, error_key/value pairs).
 
 =head1 EXAMPLE1
 
+=for comment filename=err_via_ansicolor_error_list.pl
+
  use strict;
  use warnings;
 
@@ -88,6 +90,8 @@ Process error with messages (error, error_key/value pairs).
 
 =head1 EXAMPLE2
 
+=for comment filename=err_via_ansicolor_error_list_with_params.pl
+
  use strict;
  use warnings;
 
@@ -100,6 +104,8 @@ Process error with messages (error, error_key/value pairs).
  # #Error [example2.pl:9] 1
 
 =head1 EXAMPLE3
+
+=for comment filename=err_via_ansicolor_error_list_in_eval_plus_err.pl
 
  use strict;
  use warnings;

@@ -11,13 +11,13 @@ use Error::Pure::Utils qw(err_get);
 eval { err '1', '2', '3'; };
 
 # Error structure.
-my $err_ar = err_get();
+my @err = err_get();
 
 # Dump.
 my $dump = Dumpvalue->new;
-$dump->dumpValues($err_ar);
+$dump->dumpValues(@err);
 
-# In $err_ar:
+# In @err:
 # [
 #         {
 #                 'msg' => [
@@ -30,14 +30,14 @@ $dump->dumpValues($err_ar);
 #                                 'args' => '(1)',
 #                                 'class' => 'main',
 #                                 'line' => '9',
-#                                 'prog' => 'script.pl',
+#                                 'prog' => 'err_via_ansicolor_die_with_params_in_eval_and_dump.pl',
 #                                 'sub' => 'err',
 #                         },
 #                         {
 #                                 'args' => '',
 #                                 'class' => 'main',
 #                                 'line' => '9',
-#                                 'prog' => 'script.pl',
+#                                 'prog' => 'err_via_ansicolor_die_with_params_in_eval_and_dump.pl',
 #                                 'sub' => 'eval {...}',
 #                         },
 #                 ],

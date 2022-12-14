@@ -6,7 +6,7 @@ use warnings;
 use Error::Pure::ANSIColor::Die qw(err);
 
 # Error.
-err '1';
+err '1', '2', '3';
 
 # Output:
-# 1 at example1.pl line 9.
+# 123 at ../err_via_ansicolor_die_with_params.pl line 9.

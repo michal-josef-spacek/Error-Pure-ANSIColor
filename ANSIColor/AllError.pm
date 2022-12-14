@@ -74,6 +74,8 @@ Process error with messages (error, error_key/value pairs).
 
 =head1 EXAMPLE
 
+=for comment filename=err_via_ansicolor_all_error.pl
+
  use strict;
  use warnings;
 
