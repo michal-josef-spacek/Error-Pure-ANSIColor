@@ -6,7 +6,7 @@ use warnings;
 
 use Error::Pure::Output::ANSIColor qw(err_die);
 use Error::Pure::Utils qw(err_helper);
-use List::MoreUtils qw(none);
+use List::Util qw(none);
 use Readonly;
 
 our $VERSION = 0.28;
@@ -143,7 +143,7 @@ Error::Pure::ANSIColor::Die - Error::Pure module with classic die.
 L<Error::Pure::Output::ANSIColor>,
 L<Error::Pure::Utils>,
 L<Exporter>,
-L<List::MoreUtils>,
+L<List::Util>,
 L<Readonly>.
 
 =head1 SEE ALSO

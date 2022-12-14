@@ -6,7 +6,7 @@ use warnings;
 
 use Error::Pure::Utils qw(err_helper);
 use Error::Pure::Output::ANSIColor qw(err_bt_pretty);
-use List::MoreUtils qw(none);
+use List::Util qw(none);
 use Readonly;
 
 # Constants.
@@ -87,7 +87,7 @@ Error::Pure::ANSIColor::AllError - Error::Pure module with full backtrace.
 L<Error::Pure::Output::ANSIColor>,
 L<Error::Pure::Utils>,
 L<Exporter>,
-L<List::MoreUtils>,
+L<List::Util>,
 L<Readonly>.
 
 =head1 SEE ALSO

@@ -6,7 +6,7 @@ use warnings;
 
 use Error::Pure::Output::ANSIColor qw(err_print);
 use Error::Pure::Utils qw(err_helper);
-use List::MoreUtils qw(none);
+use List::Util qw(none);
 use Readonly;
 
 # Constants.
@@ -97,7 +97,7 @@ Error::Pure::ANSIColor::Print - Error::Pure module for simple error print.
 L<Error::Pure::Output::ANSIColor>,
 L<Error::Pure::Utils>,
 L<Exporter>,
-L<List::MoreUtils>,
+L<List::Util>,
 L<Readonly>.
 
 =head1 SEE ALSO
