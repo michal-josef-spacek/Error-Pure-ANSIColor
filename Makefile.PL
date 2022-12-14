@@ -18,7 +18,7 @@ recursive_author_tests('xt');
 requires 'Error::Pure::Output::ANSIColor' => 0.01;
 requires 'Error::Pure::Utils' => 0.24;
 requires 'Exporter' => 0;
-requires 'List::Util' => 0;
+requires 'List::Util' => 1.33;
 requires 'Readonly' => 0;
 requires 'perl' => '5.6.2';
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Error-Pure-ANSIColor/issues';

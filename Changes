@@ -1,4 +1,5 @@
 0.29
+ - Fix minimal dependency for List::Util.
 
 0.28 2022-12-14T08:39:59+01:00
  - Fix links in doc.
