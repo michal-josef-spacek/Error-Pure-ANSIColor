@@ -1,4 +1,5 @@
 0.29
+ - Add link to Error::Pure to doc.
  - Change minimal dependency (0.04) to Error::Pure::Output::ANSIColor to
    fix ansi colors in Print.
  - Fix EXAMPLEs in Die doc.

@@ -53,6 +53,10 @@ Print error with all variables as simple string with ANSIColor support
 
 =over
 
+=item L<Error::Pure>
+
+Perl module for structured errors.
+
 =item L<Task::Error::Pure>
 
 Install the Error::Pure modules.

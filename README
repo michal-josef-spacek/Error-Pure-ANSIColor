@@ -26,6 +26,9 @@ DESCRIPTION
             support
 
 SEE ALSO
+    Error::Pure
+        Perl module for structured errors.
+
     Task::Error::Pure
         Install the Error::Pure modules.
 
